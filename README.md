@@ -35,8 +35,8 @@ Author: Jonathan Hornung ([JohnnyTheTank](https://github.com/JohnnyTheTank))
 ```js
 //List all available soccer seasons
 footballdataFactory.getSeasons({
-    year: '<YEAR>',           // (optional) Defaults to the current year,
-                              // given as 4 digit like '2015'
+    year: '<YEAR>', // (optional) Defaults to the current year,
+                    // given as 4 digit like '2015'
     apiKey: '<YOUR_API_KEY>', // Register for a free api key:
                               // http://api.football-data.org/register
 }).then(function (_data) {
