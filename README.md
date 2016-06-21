@@ -44,10 +44,38 @@ footballdataFactory.getSeasons({
 });
 ```
 
+#### getTeam
+
+```js
+//Show one team.
+footballdataFactory.getTeamsBySeason({
+    id: '<TEAM_ID>',
+    apiKey: '<YOUR_API_KEY>', // Register for a free api key: http://api.football-data.org/register
+}).then(function (_data) {
+    //on success
+}).catch(function (_data) {
+    //on error
+});
+```
+
 #### getTeams
 
 ```js
 //List all teams for a certain soccerseason
+footballdataFactory.getTeamsBySeason({
+    id: '<TEAM_ID>',
+    apiKey: '<YOUR_API_KEY>', // Register for a free api key: http://api.football-data.org/register
+}).then(function (_data) {
+    //on success
+}).catch(function (_data) {
+    //on error
+});
+```
+
+#### getPlayers
+
+```js
+//Show all players for a certain team.
 footballdataFactory.getTeamsBySeason({
     id: '<SEASON_ID>',
     apiKey: '<YOUR_API_KEY>', // Register for a free api key: http://api.football-data.org/register
