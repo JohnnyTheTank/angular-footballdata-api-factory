@@ -35,10 +35,8 @@ Author: Jonathan Hornung ([JohnnyTheTank](https://github.com/JohnnyTheTank))
 ```js
 //List all available soccer seasons
 footballdataFactory.getSeasons({
-    year: '<YEAR>', // (optional) Defaults to the current year,
-                    // given as 4 digit like '2015'
-    apiKey: '<YOUR_API_KEY>', // Register for a free api key:
-                              // http://api.football-data.org/register
+    year: '<YEAR>',           // (optional) Defaults to the current year, given as 4 digit like '2015'
+    apiKey: '<YOUR_API_KEY>', // Register for a free api key: http://api.football-data.org/register
 }).then(function (_data) {
     //on success
 }).catch(function (_data) {
@@ -52,8 +50,7 @@ footballdataFactory.getSeasons({
 //List all teams for a certain soccerseason
 footballdataFactory.getTeamsBySeason({
     id: '<SEASON_ID>',
-    apiKey: '<YOUR_API_KEY>', // Register for a free api key:
-                              // http://api.football-data.org/register
+    apiKey: '<YOUR_API_KEY>', // Register for a free api key: http://api.football-data.org/register
 }).then(function (_data) {
     //on success
 }).catch(function (_data) {
@@ -67,11 +64,8 @@ footballdataFactory.getTeamsBySeason({
 //Show League Table / current standing.
 footballdataFactory.getLeagueTableBySeason({
     id: '<SEASON_ID>',
-    matchday: '<MATCHDAY>',   // (optional) For the leageTable subresource,
-                              // the matchday defaults to the current matchday.
-                              // For former seasons the last matchday is taken.
-    apiKey: '<YOUR_API_KEY>', // Register for a free api key:
-                              // http://api.football-data.org/register
+    matchday: '<MATCHDAY>',   // (optional) For the leageTable subresource, the matchday defaults to the current matchday. For former seasons the last matchday is taken.
+    apiKey: '<YOUR_API_KEY>', // Register for a free api key: http://api.football-data.org/register
 }).then(function (_data) {
     //on success
 }).catch(function (_data) {
@@ -85,18 +79,9 @@ footballdataFactory.getLeagueTableBySeason({
 //List all fixtures for a certain soccerseason.
 footballdataFactory.getFixturesBySeason({
     id: '<SEASON_ID>',
-    timeFrame: '<TIMEFRAME>', // (optional) The value of the timeFrame argument
-                              // must start with either p(ast) or n(ext), representing
-                              // a timeframe either in the past or future. It is
-                              // followed by a number in the range 1..99. It defaults
-                              // to n7 in the fixture resource and is unset for 
-                              // fixture as a subresource.
-                              // For instance: p6 would return all fixtures in
-                              // the last 6 days, whereas n23 would result in
-                              // returning all fixtures in the next 23 days.
+    timeFrame: '<TIMEFRAME>', // (optional) The value of the timeFrame argument must start with either p(ast) or n(ext), representing a timeframe either in the past or future. It is followed by a number in the range 1..99. It defaults to n7 in the fixture resource and is unset for fixture as a subresource. For instance: p6 would return all fixtures in the last 6 days, whereas n23 would result in returning all fixtures in the next 23 days.
     matchday: '<MATCHDAY>',   // (optional) default is unset
-    apiKey: '<YOUR_API_KEY>', // Register for a free api key:
-                              // http://api.football-data.org/register
+    apiKey: '<YOUR_API_KEY>', // Register for a free api key: http://api.football-data.org/register
 }).then(function (_data) {
     //on success
 }).catch(function (_data) {
