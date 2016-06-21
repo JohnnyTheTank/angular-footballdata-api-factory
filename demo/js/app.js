@@ -30,6 +30,13 @@ app.controller('controller', ['$scope', 'footballdataFactory', function($scope, 
         console.info("getFixturesByTeam", _data);
     });
 
+    footballdataFactory.getTeam({
+        id: 5,
+        apiKey: apiKey,
+    }).then(function(_data){
+        console.info("getTeam", _data);
+    });
+
     footballdataFactory.getPlayersByTeam({
         id: 5,
         apiKey: apiKey,

@@ -48,7 +48,7 @@ footballdataFactory.getSeasons({
 
 ```js
 //Show one team.
-footballdataFactory.getTeamsBySeason({
+footballdataFactory.getTeam({
     id: '<TEAM_ID>',
     apiKey: '<YOUR_API_KEY>', // Register for a free api key: http://api.football-data.org/register
 }).then(function (_data) {
@@ -63,7 +63,7 @@ footballdataFactory.getTeamsBySeason({
 ```js
 //List all teams for a certain soccerseason
 footballdataFactory.getTeamsBySeason({
-    id: '<TEAM_ID>',
+    id: '<SEASON_ID>',
     apiKey: '<YOUR_API_KEY>', // Register for a free api key: http://api.football-data.org/register
 }).then(function (_data) {
     //on success
@@ -76,8 +76,8 @@ footballdataFactory.getTeamsBySeason({
 
 ```js
 //Show all players for a certain team.
-footballdataFactory.getTeamsBySeason({
-    id: '<SEASON_ID>',
+footballdataFactory.getPlayersByTeam({
+    id: '<TEAM_ID>',
     apiKey: '<YOUR_API_KEY>', // Register for a free api key: http://api.football-data.org/register
 }).then(function (_data) {
     //on success
@@ -119,11 +119,10 @@ footballdataFactory.getFixture({
 #### getFixtures
 
 ```js
-//List all fixtures for a certain soccerseason.
-footballdataFactory.getFixturesBySeason({
-    id: '<SEASON_ID>',
+//List fixtures across a set of soccerseasons.
+footballdataFactory.getFixtures({
     timeFrame: '<TIMEFRAME>', // (optional) The value of the timeFrame argument must start with either p(ast) or n(ext), representing a timeframe either in the past or future. It is followed by a number in the range 1..99. It defaults to n7 in the fixture resource and is unset for fixture as a subresource. For instance: p6 would return all fixtures in the last 6 days, whereas n23 would result in returning all fixtures in the next 23 days.
-    matchday: '<MATCHDAY>',   // (optional) default is unset
+    league: '<LEAGUE_CODE>',  // (optional) A (list of, comma separated) league-code(s). Default is unset and means all available. See the soccerseason list resource for currently available leagues or the appendix of the full documentation for a table of all league codes http://api.football-data.org/docs/latest/index.html
     apiKey: '<YOUR_API_KEY>', // Register for a free api key: http://api.football-data.org/register
 }).then(function (_data) {
     //on success
@@ -133,10 +132,11 @@ footballdataFactory.getFixturesBySeason({
 ```
 
 ```js
-//List fixtures across a set of soccerseasons.
-footballdataFactory.getFixtures({
+//List all fixtures for a certain soccerseason.
+footballdataFactory.getFixturesBySeason({
+    id: '<SEASON_ID>',
     timeFrame: '<TIMEFRAME>', // (optional) The value of the timeFrame argument must start with either p(ast) or n(ext), representing a timeframe either in the past or future. It is followed by a number in the range 1..99. It defaults to n7 in the fixture resource and is unset for fixture as a subresource. For instance: p6 would return all fixtures in the last 6 days, whereas n23 would result in returning all fixtures in the next 23 days.
-    league: '<LEAGUE_CODE>',  // (optional) A (list of, comma separated) league-code(s). Default is unset and means all available. See the soccerseason list resource for currently available leagues or the appendix of the full documentation for a table of all league codes http://api.football-data.org/docs/latest/index.html
+    matchday: '<MATCHDAY>',   // (optional) default is unset
     apiKey: '<YOUR_API_KEY>', // Register for a free api key: http://api.football-data.org/register
 }).then(function (_data) {
     //on success
