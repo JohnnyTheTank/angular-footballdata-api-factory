@@ -1,6 +1,6 @@
 /**
     @name: angular-footballdata-api-factory 
-    @version: 0.2.3 (21-06-2016) 
+    @version: 0.1.0 (21-06-2016) 
     @author: Jonathan Hornung 
     @url: https://github.com/JohnnyTheTank/angular-footballdata-api-factory#readme 
     @license: MIT
