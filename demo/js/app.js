@@ -4,7 +4,7 @@ app.controller('controller', ['$scope', 'footballdataFactory', function($scope, 
     var apiKey = 'e42cb6a6ecc949c8897e06d284a55e05';
 
     footballdataFactory.getSeasons({
-        year: '2014',
+        season: '2014',
         apiKey: apiKey,
     }).then(function(_data){
         console.info("getSeasons", _data);

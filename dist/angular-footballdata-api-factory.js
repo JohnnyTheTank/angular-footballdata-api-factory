@@ -166,7 +166,7 @@ angular.module("jtt_footballdata", [])
             switch (_type) {
                 case "getSeasons":
                     footballdataSearchData = this.fillDataInObjectByList(footballdataSearchData, _params, [
-                        'apiKey', 'year',
+                        'apiKey', 'season',
                     ]);
                     footballdataSearchData.url = this.getApiBaseUrl() + 'soccerseasons/';
                     break;

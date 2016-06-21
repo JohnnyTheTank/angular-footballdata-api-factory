@@ -35,7 +35,7 @@ Author: Jonathan Hornung ([JohnnyTheTank](https://github.com/JohnnyTheTank))
 ```js
 //List all available soccer seasons
 footballdataFactory.getSeasons({
-    year: '<YEAR>',           // (optional) Defaults to the current year, given as 4 digit like '2015'
+    season: '<SEASON>',       // (optional) Defaults to the current year, given as 4 digit like '2015'
     apiKey: '<YOUR_API_KEY>', // Register for a free api key: http://api.football-data.org/register
 }).then(function (_data) {
     //on success
@@ -73,6 +73,21 @@ footballdataFactory.getLeagueTableBySeason({
 });
 ```
 
+
+#### getFixture
+
+```js
+//Show one fixture.
+footballdataFactory.getFixture({
+    id: '<FIXTURE_ID>',
+    apiKey: '<YOUR_API_KEY>', // Register for a free api key: http://api.football-data.org/register
+}).then(function (_data) {
+    //on success
+}).catch(function (_data) {
+    //on error
+});
+```
+
 #### getFixtures
 
 ```js
@@ -81,6 +96,34 @@ footballdataFactory.getFixturesBySeason({
     id: '<SEASON_ID>',
     timeFrame: '<TIMEFRAME>', // (optional) The value of the timeFrame argument must start with either p(ast) or n(ext), representing a timeframe either in the past or future. It is followed by a number in the range 1..99. It defaults to n7 in the fixture resource and is unset for fixture as a subresource. For instance: p6 would return all fixtures in the last 6 days, whereas n23 would result in returning all fixtures in the next 23 days.
     matchday: '<MATCHDAY>',   // (optional) default is unset
+    apiKey: '<YOUR_API_KEY>', // Register for a free api key: http://api.football-data.org/register
+}).then(function (_data) {
+    //on success
+}).catch(function (_data) {
+    //on error
+});
+```
+
+```js
+//List fixtures across a set of soccerseasons.
+footballdataFactory.getFixtures({
+    timeFrame: '<TIMEFRAME>', // (optional) The value of the timeFrame argument must start with either p(ast) or n(ext), representing a timeframe either in the past or future. It is followed by a number in the range 1..99. It defaults to n7 in the fixture resource and is unset for fixture as a subresource. For instance: p6 would return all fixtures in the last 6 days, whereas n23 would result in returning all fixtures in the next 23 days.
+    league: '<LEAGUE_CODE>',  // (optional) A (list of, comma separated) league-code(s). Default is unset and means all available. See the soccerseason list resource for currently available leagues or the appendix of the full documentation for a table of all league codes http://api.football-data.org/docs/latest/index.html
+    apiKey: '<YOUR_API_KEY>', // Register for a free api key: http://api.football-data.org/register
+}).then(function (_data) {
+    //on success
+}).catch(function (_data) {
+    //on error
+});
+```
+
+```js
+//Show all fixtures for a certain team.
+footballdataFactory.getFixturesByTeam({
+    id: '<TEAM_ID>',
+    season: '<SEASON>',       // (optional) Defaults to the current year, given as 4 digit like '2015'
+    timeFrame: '<TIMEFRAME>', // (optional) The value of the timeFrame argument must start with either p(ast) or n(ext), representing a timeframe either in the past or future. It is followed by a number in the range 1..99. It defaults to n7 in the fixture resource and is unset for fixture as a subresource. For instance: p6 would return all fixtures in the last 6 days, whereas n23 would result in returning all fixtures in the next 23 days.
+    venue: '<VENUE>',         // (optional) 'home' or 'away'. Default is unset and means to return all fixtures.
     apiKey: '<YOUR_API_KEY>', // Register for a free api key: http://api.football-data.org/register
 }).then(function (_data) {
     //on success
