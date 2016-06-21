@@ -1,4 +1,4 @@
-**angular-footballdata-api-factory** is an angularjs module with a footballdata api factory.
+**angular-footballdata-api-factory** is an angularjs module with a [football-data.org](http://api.football-data.org) api factory.
 
 [![npm version](https://badge.fury.io/js/angular-footballdata-api-factory.png)](https://badge.fury.io/js/angular-footballdata-api-factory)
 [![Bower version](https://badge.fury.io/bo/angular-footballdata-api-factory.png)](https://badge.fury.io/bo/angular-footballdata-api-factory)
