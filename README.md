@@ -30,6 +30,20 @@ Author: Jonathan Hornung ([JohnnyTheTank](https://github.com/JohnnyTheTank))
 
 ### factory methods
 
+#### getSeason
+
+```js
+//Show one Season
+footballdataFactory.getSeason({
+    id: '<SEASON_ID>',
+    apiKey: '<YOUR_API_KEY>', // Register for a free api key: http://api.football-data.org/register
+}).then(function (_data) {
+    //on success
+}).catch(function (_data) {
+    //on error
+});
+```
+
 #### getSeasons
 
 ```js
