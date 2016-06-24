@@ -1,6 +1,6 @@
 /**
     @name: angular-footballdata-api-factory 
-    @version: 0.1.0 (21-06-2016) 
+    @version: 0.2.0 (24-06-2016) 
     @author: Jonathan Hornung 
     @url: https://github.com/JohnnyTheTank/angular-footballdata-api-factory#readme 
     @license: MIT
@@ -15,6 +15,20 @@ angular.module("jtt_footballdata", [])
         footballdataFactory.getSeasons = function (_params) {
 
             var searchData = footballdataSearchDataService.getNew("getSeasons", _params);
+
+            return $http({
+                method: 'GET',
+                url: searchData.url,
+                params: searchData.object,
+                headers: {
+                    'X-Auth-Token': _params.apiKey,
+                }
+            });
+        };
+
+        footballdataFactory.getSeason = function (_params) {
+
+            var searchData = footballdataSearchDataService.getNew("getSeason", _params);
 
             return $http({
                 method: 'GET',
@@ -169,6 +183,13 @@ angular.module("jtt_footballdata", [])
                         'apiKey', 'season',
                     ]);
                     footballdataSearchData.url = this.getApiBaseUrl() + 'soccerseasons/';
+                    break;
+
+                case "getSeason":
+                    footballdataSearchData = this.fillDataInObjectByList(footballdataSearchData, _params, [
+                        'apiKey',
+                    ]);
+                    footballdataSearchData.url = this.getApiBaseUrl() + 'soccerseasons/' + _params.id;
                     break;
 
                 case "getTeam":

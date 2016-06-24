@@ -10,6 +10,13 @@ app.controller('controller', ['$scope', 'footballdataFactory', function($scope, 
         console.info("getSeasons", _data);
     });
 
+    footballdataFactory.getSeason({
+        id: '424',
+        apiKey: apiKey,
+    }).then(function(_data){
+        console.info("getSeason", _data);
+    });
+
     footballdataFactory.getFixtures({
         apiKey: apiKey,
     }).then(function(_data){
