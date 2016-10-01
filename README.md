@@ -1,7 +1,7 @@
 **angular-footballdata-api-factory** is an angularjs module with a [football-data.org](http://api.football-data.org) api factory.
 
-[![npm version](https://badge.fury.io/js/angular-footballdata-api-factory.png)](https://badge.fury.io/js/angular-footballdata-api-factory)
-[![Bower version](https://badge.fury.io/bo/angular-footballdata-api-factory.png)](https://badge.fury.io/bo/angular-footballdata-api-factory)
+[![npm version](https://badge.fury.io/js/angular-footballdata-api-factory.svg)](https://badge.fury.io/js/angular-footballdata-api-factory)
+[![Bower version](https://badge.fury.io/bo/angular-footballdata-api-factory.svg)](https://badge.fury.io/bo/angular-footballdata-api-factory)
  
 Author: Jonathan Hornung ([JohnnyTheTank](https://github.com/JohnnyTheTank))
 
@@ -11,8 +11,8 @@ Author: Jonathan Hornung ([JohnnyTheTank](https://github.com/JohnnyTheTank))
     1. `bower install --save angular-footballdata-api-factory`
     2. `npm install --save angular-footballdata-api-factory`
     3. download [angular-footballdata-api-factory.zip](https://github.com/JohnnyTheTank/angular-footballdata-api-factory/zipball/master)
-2. Add `jtt_footballdata` to your application's module dependencies.
-3. Include dependencies in your HTML.
+
+2. Include dependencies in your HTML.
     1. When using bower:
     ```html
     <script src="bower_components/angular-footballdata-api-factory/dist/angular-footballdata-api-factory.min.js"></script>
@@ -25,8 +25,8 @@ Author: Jonathan Hornung ([JohnnyTheTank](https://github.com/JohnnyTheTank))
     ```html
     <script src="angular-footballdata-api-factory.min.js"></script>
     ```
+3. Add **`jtt_footballdata`** to your application's module dependencies.
 4. Use the factory `footballdataFactory`
-
 
 ### factory methods
 
