@@ -149,7 +149,7 @@ angular.module("jtt_footballdata", [])
     }])
     .service('footballdataSearchDataService', function () {
         this.getApiBaseUrl = function () {
-            return 'http://api.football-data.org/v1/';
+            return '//api.football-data.org/v1/';
         };
 
         this.fillDataInObjectByList = function (_object, _params, _list) {
