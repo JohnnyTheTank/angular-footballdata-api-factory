@@ -1,6 +1,6 @@
 /**
     @name: angular-footballdata-api-factory 
-    @version: 0.2.0 (19-12-2016) 
+    @version: 0.2.1 (20-12-2016) 
     @author: Jonathan Hornung 
     @url: https://github.com/JohnnyTheTank/angular-footballdata-api-factory#readme 
     @license: MIT
@@ -156,7 +156,7 @@ angular.module("jtt_footballdata", [])
     }])
     .service('footballdataSearchDataService', function () {
         this.getApiBaseUrl = function () {
-            return '//api.football-data.org/v1/';
+            return 'https://api.football-data.org/v1/';
         };
 
         this.fillDataInObjectByList = function (_object, _params, _list) {

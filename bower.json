@@ -4,7 +4,7 @@
   "authors": [
     "Jonathan Hornung <jonathan.hornung@gmail.com>"
   ],
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "angular factory for the football-data.org rest api",
   "main": "dist/angular-footballdata-api-factory.min.js",
   "moduleType": [],
