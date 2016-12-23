@@ -1,6 +1,6 @@
 /**
     @name: angular-footballdata-api-factory 
-    @version: 0.2.2 (23-12-2016) 
+    @version: 0.2.4 (23-12-2016) 
     @author: Jonathan Hornung 
     @url: https://github.com/JohnnyTheTank/angular-footballdata-api-factory#readme 
     @license: MIT
@@ -191,72 +191,72 @@ angular.module("jtt_footballdata", [])
             switch (_type) {
                 case "getSeasons":
                     footballdataSearchData = this.fillDataInObjectByList(footballdataSearchData, _params, [
-                        'protocol', 'apiKey', 'season',
+                        'apiKey', 'season',
                     ]);
-                    footballdataSearchData.url = this.getApiBaseUrl(footballdataSearchData.object.protocol) + 'soccerseasons/';
+                    footballdataSearchData.url = this.getApiBaseUrl(_params.protocol) + 'soccerseasons/';
                     break;
 
                 case "getSeason":
                     footballdataSearchData = this.fillDataInObjectByList(footballdataSearchData, _params, [
-                        'protocol', 'apiKey',
+                        'apiKey',
                     ]);
-                    footballdataSearchData.url = this.getApiBaseUrl(footballdataSearchData.object.protocol) + 'soccerseasons/' + _params.id;
+                    footballdataSearchData.url = this.getApiBaseUrl(_params.protocol) + 'soccerseasons/' + _params.id;
                     break;
 
                 case "getTeam":
                     footballdataSearchData = this.fillDataInObjectByList(footballdataSearchData, _params, [
-                        'protocol', 'apiKey'
+                        'apiKey'
                     ]);
-                    footballdataSearchData.url = this.getApiBaseUrl(footballdataSearchData.object.protocol) + 'teams/' + _params.id;
+                    footballdataSearchData.url = this.getApiBaseUrl(_params.protocol) + 'teams/' + _params.id;
                     break;
 
                 case "getPlayersByTeam":
                     footballdataSearchData = this.fillDataInObjectByList(footballdataSearchData, _params, [
-                        'protocol', 'apiKey'
+                        'apiKey'
                     ]);
-                    footballdataSearchData.url = this.getApiBaseUrl(footballdataSearchData.object.protocol) + 'teams/' + _params.id + '/players';
+                    footballdataSearchData.url = this.getApiBaseUrl(_params.protocol) + 'teams/' + _params.id + '/players';
                     break;
 
                 case "getFixtures":
                     footballdataSearchData = this.fillDataInObjectByList(footballdataSearchData, _params, [
-                        'protocol', 'apiKey', 'league', 'timeFrame'
+                        'apiKey', 'league', 'timeFrame'
                     ]);
-                    footballdataSearchData.url = this.getApiBaseUrl(footballdataSearchData.object.protocol) + 'fixtures';
+                    footballdataSearchData.url = this.getApiBaseUrl(_params.protocol) + 'fixtures';
                     break;
 
                 case "getFixture":
                     footballdataSearchData = this.fillDataInObjectByList(footballdataSearchData, _params, [
-                        'protocol', 'apiKey', 'head2head'
+                        'apiKey', 'head2head'
                     ]);
-                    footballdataSearchData.url = this.getApiBaseUrl(footballdataSearchData.object.protocol) + 'fixtures/' + _params.id;
+                    footballdataSearchData.url = this.getApiBaseUrl(_params.protocol) + 'fixtures/' + _params.id;
                     break;
 
                 case "getTeamsBySeason":
                     footballdataSearchData = this.fillDataInObjectByList(footballdataSearchData, _params, [
-                        'protocol', 'apiKey',
+                        'apiKey',
                     ]);
-                    footballdataSearchData.url = this.getApiBaseUrl(footballdataSearchData.object.protocol) + 'soccerseasons/' + _params.id + '/teams';
+                    footballdataSearchData.url = this.getApiBaseUrl(_params.protocol) + 'soccerseasons/' + _params.id + '/teams';
                     break;
 
                 case "getLeagueTableBySeason":
                     footballdataSearchData = this.fillDataInObjectByList(footballdataSearchData, _params, [
-                        'protocol', 'apiKey', 'matchday'
+                        'apiKey', 'matchday'
                     ]);
-                    footballdataSearchData.url = this.getApiBaseUrl(footballdataSearchData.object.protocol) + 'soccerseasons/' + _params.id + '/leagueTable';
+                    footballdataSearchData.url = this.getApiBaseUrl(_params.protocol) + 'soccerseasons/' + _params.id + '/leagueTable';
                     break;
 
                 case "getFixturesBySeason":
                     footballdataSearchData = this.fillDataInObjectByList(footballdataSearchData, _params, [
-                        'protocol', 'apiKey', 'matchday', 'timeFrame'
+                        'apiKey', 'matchday', 'timeFrame'
                     ]);
-                    footballdataSearchData.url = this.getApiBaseUrl(footballdataSearchData.object.protocol) + 'soccerseasons/' + _params.id + '/fixtures';
+                    footballdataSearchData.url = this.getApiBaseUrl(_params.protocol) + 'soccerseasons/' + _params.id + '/fixtures';
                     break;
 
                 case "getFixturesByTeam":
                     footballdataSearchData = this.fillDataInObjectByList(footballdataSearchData, _params, [
-                        'protocol', 'apiKey', 'season', 'timeFrame', 'venue'
+                        'apiKey', 'season', 'timeFrame', 'venue'
                     ]);
-                    footballdataSearchData.url = this.getApiBaseUrl(footballdataSearchData.object.protocol) + 'teams/' + _params.id + '/fixtures';
+                    footballdataSearchData.url = this.getApiBaseUrl(_params.protocol) + 'teams/' + _params.id + '/fixtures';
                     break;
 
             }

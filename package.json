@@ -1,6 +1,6 @@
 {
   "name": "angular-footballdata-api-factory",
-  "version": "0.2.2",
+  "version": "0.2.4",
   "description": "angularjs factory for footballdata jsonp rest api requests",
   "main": "dist/angular-footballdata-api-factory.min.js",
   "scripts": {
