@@ -36,6 +36,7 @@ Author: Jonathan Hornung ([JohnnyTheTank](https://github.com/JohnnyTheTank))
 //Show one Season
 footballdataFactory.getSeason({
     id: '<SEASON_ID>',
+    protocol: '<PROTOCOL>', // (optional) 'http', 'https', 'auto'
     apiKey: '<YOUR_API_KEY>', // Register for a free api key: http://api.football-data.org/register
 }).then(function (_data) {
     //on success
@@ -50,6 +51,7 @@ footballdataFactory.getSeason({
 //List all available soccer seasons
 footballdataFactory.getSeasons({
     season: '<SEASON>',       // (optional) Default is the current year (4 digit), e.g: '2015'
+    protocol: '<PROTOCOL>', // (optional) 'http', 'https', 'auto'
     apiKey: '<YOUR_API_KEY>', // Register for a free api key: http://api.football-data.org/register
 }).then(function (_data) {
     //on success
@@ -64,6 +66,7 @@ footballdataFactory.getSeasons({
 //Show one team.
 footballdataFactory.getTeam({
     id: '<TEAM_ID>',
+    protocol: '<PROTOCOL>', // (optional) 'http', 'https', 'auto'
     apiKey: '<YOUR_API_KEY>', // Register for a free api key: http://api.football-data.org/register
 }).then(function (_data) {
     //on success
@@ -78,6 +81,7 @@ footballdataFactory.getTeam({
 //List all teams for a certain soccerseason
 footballdataFactory.getTeamsBySeason({
     id: '<SEASON_ID>',
+    protocol: '<PROTOCOL>', // (optional) 'http', 'https', 'auto'
     apiKey: '<YOUR_API_KEY>', // Register for a free api key: http://api.football-data.org/register
 }).then(function (_data) {
     //on success
@@ -92,6 +96,7 @@ footballdataFactory.getTeamsBySeason({
 //Show all players for a certain team.
 footballdataFactory.getPlayersByTeam({
     id: '<TEAM_ID>',
+    protocol: '<PROTOCOL>', // (optional) 'http', 'https', 'auto'
     apiKey: '<YOUR_API_KEY>', // Register for a free api key: http://api.football-data.org/register
 }).then(function (_data) {
     //on success
@@ -107,6 +112,7 @@ footballdataFactory.getPlayersByTeam({
 footballdataFactory.getLeagueTableBySeason({
     id: '<SEASON_ID>',
     matchday: '<MATCHDAY>',   // (optional) The current/last matchday is taken per default
+    protocol: '<PROTOCOL>', // (optional) 'http', 'https', 'auto'
     apiKey: '<YOUR_API_KEY>', // Register for a free api key: http://api.football-data.org/register
 }).then(function (_data) {
     //on success
@@ -137,6 +143,7 @@ footballdataFactory.getFixture({
 footballdataFactory.getFixtures({
     timeFrame: '<TIMEFRAME>', // (optional) The value of the timeFrame argument must start with either 'p' for past or 'n' for next. It is followed by a number in the range 1-99.
     league: '<LEAGUE_CODE>',  // (optional) A (list of, comma separated) league-code(s). Default is unset. Get all league codes at http://api.football-data.org/docs/latest/index.html
+    protocol: '<PROTOCOL>', // (optional) 'http', 'https', 'auto'
     apiKey: '<YOUR_API_KEY>', // Register for a free api key: http://api.football-data.org/register
 }).then(function (_data) {
     //on success
@@ -151,6 +158,7 @@ footballdataFactory.getFixturesBySeason({
     id: '<SEASON_ID>',
     timeFrame: '<TIMEFRAME>', // (optional) The value of the timeFrame argument must start with either 'p' for past or 'n' for next. It is followed by a number in the range 1-99.
     matchday: '<MATCHDAY>',   // (optional) The current/last matchday is taken per default
+    protocol: '<PROTOCOL>', // (optional) 'http', 'https', 'auto'
     apiKey: '<YOUR_API_KEY>', // Register for a free api key: http://api.football-data.org/register
 }).then(function (_data) {
     //on success
@@ -166,6 +174,7 @@ footballdataFactory.getFixturesByTeam({
     season: '<SEASON>',       // (optional) Defaults to the current year, given as 4 digit like '2015'
     timeFrame: '<TIMEFRAME>', // (optional) The value of the timeFrame argument must start with either 'p' for past or 'n' for next. It is followed by a number in the range 1-99.
     venue: '<VENUE>',         // (optional) Valid values: `home` and `away`. Default is unset.
+    protocol: '<PROTOCOL>', // (optional) 'http', 'https', 'auto'
     apiKey: '<YOUR_API_KEY>', // Register for a free api key: http://api.football-data.org/register
 }).then(function (_data) {
     //on success

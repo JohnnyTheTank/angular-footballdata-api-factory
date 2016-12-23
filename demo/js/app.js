@@ -4,14 +4,14 @@ app.controller('controller', ['$scope', 'footballdataFactory', function($scope, 
     var apiKey = 'e42cb6a6ecc949c8897e06d284a55e05';
 
     footballdataFactory.getSeasons({
-        season: '2014',
+        season: '2015',
         apiKey: apiKey,
     }).then(function(_data){
         console.info("getSeasons", _data);
     });
 
     footballdataFactory.getSeason({
-        id: '424',
+        id: '426',
         apiKey: apiKey,
     }).then(function(_data){
         console.info("getSeason", _data);
@@ -24,7 +24,7 @@ app.controller('controller', ['$scope', 'footballdataFactory', function($scope, 
     });
 
     footballdataFactory.getFixture({
-        id: 149461,
+        id: 155048,
         apiKey: apiKey,
     }).then(function(_data){
         console.info("getFixture", _data);
@@ -52,14 +52,14 @@ app.controller('controller', ['$scope', 'footballdataFactory', function($scope, 
     });
 
     footballdataFactory.getTeamsBySeason({
-        id: 351,
+        id: 424,
         apiKey: apiKey,
     }).then(function(_data){
         console.info("getTeamsBySeason", _data);
     });
 
     footballdataFactory.getLeagueTableBySeason({
-        id: 351,
+        id: 426,
         matchday: 10,
         apiKey: apiKey,
     }).then(function(_data){
@@ -67,7 +67,7 @@ app.controller('controller', ['$scope', 'footballdataFactory', function($scope, 
     });
 
     footballdataFactory.getFixturesBySeason({
-        id: 351,
+        id: 426,
         matchday: 10,
         apiKey: apiKey,
     }).then(function(_data){
